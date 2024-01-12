@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIADI Patundshmeri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+    <nav>
+        <label class="logo">RIADI Patundshmeri</label>
+        <ul>
+            <li>  <a class="active" href="#">Ballina</a> </li>
+              <li>  <a  href="#projektet">Projektet</a></li>
+              <li>  <a  href="#sherbimet">Sherbimet</a></li>
+              <li>  <a  href="#kontakti">Kontakti</a></li>
+              <label for="">
+                <span id="ora"></span>
+              </label>
+
+            </ul>
+    </nav>
+
+
+
+
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-elements">
+                <h1 class="title" id="first-title">Banesa për rehati</h1>
+                <button class="button-hero" onclick="ndryshoTekstin()">Me shume...</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="services" id="sherbimet">
+        <div class="container">
+            <h1>Cka ofrojme?</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="front">
+                        <img src="IMG2/apartment-icon-24363.png" alt="banesa" width="128px">
+                        <h2>Banesa</h2>
+                    </div>
+                    <div class="back">
+                        <p>Mirë se vini në strehimin tuaj ideal urban!</p>
+                    </div>
+                </div>
+
+
+
+                <div class="card">
+                    <div class="front">
+                        <img src="IMG/test.jpg" alt="kuzhina">
+                        <h2>Kuzhina</h2>
+                    </div>
+                    <div class="back">
+                        <p>Hyni në strehë të kuzhinës me kuzhinën tonë të dizajnuar me përpikëri.</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="front">
+                        <img src="IMG2/sofa.jpg" alt="mobilje" width="128px">
+                        <h2>Mobilje</h2>
+                    </div>
+                    <div class="back">
+                        <p>Eja në një hapësirë ku komoditeti dhe stili bashkohen në harmoni të përsosur, në dhomen tonë te ndenjes shoqeruar me mobiljet të modelit më të ri!</p>
+                    </div>
+                </div>
+           
+
+
+                <div class="card">
+                    <div class="front">
+                        <img src="IMG/test4.jpg" alt="te ndryshme">
+                        <h2>Te ndryshme</h2>
+                    </div>
+                    <div class="back">
+                        <p>Ju na jepni iden ne e kthejme në realitet!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="category" id="projektet">
+        <div class="container">
+            <div class="category-elements">
+                <h1>Kategorite</h1>
+
+                <div class="filter">
+                    <a href="#" class="button active" data-filter="tegjtha">Te gjitha</a>
+                    <a href="#" class="button" data-filter="banesa">Banesa</a>
+                    <a href="#" class="button" data-filter="kuzhina">Kuzhina</a>
+                    <a href="#" class="button" data-filter="mobilje">Mobilje</a>
+                </div>
+                <div class="category-images">
+                    <section class="content" id="images">
+
+                        <div class="image banesa">
+                            <img src="IMG2/11.jpg">
+                        </div>
+
+                        <div class="image banesa">
+                            <img src="IMG2/bck.jpg">
+                        </div>
+
+                        <div class="image banesa">
+                            <img src="IMG2/noa.jpg">
+                        </div>
+
+
+                    
+
+                        <div class="image kuzhina">
+                            <img src="IMG2/k1.jpg">
+                        </div>
+
+                        <div class="image kuzhina">
+                            <img src="IMG2/k2.jpg">
+                        </div>
+
+                        <div class="image kuzhina">
+                            <img src="IMG2/k3.jpg">
+                        </div>
+
+
+                        <div class="image mobilje">
+                                <img src="IMG2/lii.jpg">
+                            </div>
+    
+                            <div class="image mobilje">
+                                <img src="IMG/liv.jpg">
+                            </div>
+    
+                            <div class="image mobilje">
+                                <img src="IMG2/livee.jpeg">
+                            </div>
+
+
+                    </section>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="dimensions-calculation">
+        <div class="container">
+            <div class="calculator">
+                <h1>Llogarit cmimin</h1>
+                <p>Kalkulo cmimin e baneses së menduar, duke shenuar m^2 te saj:</p>
+                <img src="IMG/cmimorja.jpg" >
+
+                <label for="meter" >Shtyp metrat:</label>
+                <input type="number" name="meter" oninput="llogaritDimensionet(this.value)">
+
+                <label for="result">Cmimi per meter (€)</label>
+                <input type="number" name="result" id="result"> 
+            </div>
+        </div>
+    </div>
+    
+
+        <div class="contact" id="kontakti">
+            <div class="container">
+                <h1>Na kontakto</h1>
+                <div class="contact-form">
+                    <form name="myform" onsubmit="return validateform()">
+                        <label for="emri">Emri dhe Mbiemri:</label>
+                        <input type="text" name="emri"><br>
+
+                        <label for="email">Adresa Elektronike:</label>
+                        <input type="email" name="email" ><br>
+
+                        <label for="pershkrimi">Pershkrimi:</label>
+                       <textarea name="pershkrimi" rows="10"></textarea>
+
+                        <input type="submit" value="Dergo" value="Dergo">
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+            <div class="footer">
+                <h4> Te gjitha te drejtat e rezervuara nga RIADI Patundshmeri | 
+                    Mundesoi: Haka GASHI 
+                </h4>
+            </div>
+            <script src="script.js"></script>
+</body>
+</html>
